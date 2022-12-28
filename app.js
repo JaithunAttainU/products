@@ -16,7 +16,9 @@ app.use(fileUpload())
 app.use(express.static('public'))
 
 app.use('/products', productRouter)
-app.listen(8000, () => {
+
+const PORT = process.env.PORT || 8000
+app.listen(PORT, () => {
   console.log("Server Started Successfully")
   connectToDB()
 })
