@@ -14,6 +14,7 @@ const addProduct = async (req, res) => {
     if (req.files && Object.keys(req.files).length > 0) {
       const fileData = req.files.image
 
+      console.log("Hello")
       //converting binary data to Base64 String
       const base64EncodedData = Base64.encode(fileData.data)
 
